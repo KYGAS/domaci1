@@ -1,1 +1,35 @@
-<p>language-detection works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Language Detection Tool</title>
+  <!-- Include your CSS stylesheets and other necessary dependencies here -->
+</head>
+<body>
+
+  <h1>Language Detection</h1>
+
+  <form id="languageDetectionForm">
+    <label for="textInput">Text Input:</label>
+    <textarea id="textInput" name="text" rows="4" cols="50" required></textarea>
+
+    <div>
+      <input type="checkbox" id="cleanCheckbox" name="clean" value="true">
+      <label for="cleanCheckbox">Clean Text</label>
+    </div>
+
+    <button type="submit" (click)="submitForm()">Submit</button>
+  </form>
+
+  <!-- Display results here after API response -->
+  <div id="resultContainer">
+    <h2>Language Detection Result</h2>
+    <ul id="languageList">
+      <!-- Display detected languages and confidence levels here -->
+    </ul>
+  </div>
+
+  <!-- Include your scripts and other necessary dependencies here -->
+</body>
+</html>

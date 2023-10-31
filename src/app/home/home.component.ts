@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit {
     const savedToken = sessionStorage.getItem('userToken');
     if (savedToken) {
       this.token = savedToken;
+      this.tokenService.setToken(this.token);
       this.tokenService.setSetToken(this.token != '');
       this.setToken = this.tokenService.getSetToken();
     }
@@ -25,6 +26,7 @@ export class HomeComponent implements OnInit {
   submitToken() {
     // Save the token to the session storage
     sessionStorage.setItem('userToken', this.token);
+    this.tokenService.setToken(this.token);
     this.tokenService.setSetToken(this.token != '');
     this.setToken = this.tokenService.getSetToken();
   }

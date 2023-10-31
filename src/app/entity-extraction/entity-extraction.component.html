@@ -1,1 +1,42 @@
-<p>entity-extraction works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entity Extraction Tool</title>
+  <!-- Include your CSS stylesheets and other necessary dependencies here -->
+</head>
+<body>
+
+  <h1>Entity Extraction</h1>
+
+  <form id="entityExtractionForm">
+    <label for="textInput">Text Input:</label>
+    <textarea id="textInput" name="text" rows="4" cols="50" required></textarea>
+
+    <br>
+
+    <label for="minConfidence">Minimum Confidence:</label>
+    <input type="range" id="minConfidence" name="minConfidence" min="0" max="1" step="0.01" value="0.5">
+
+    <br>
+    
+    <label>Include:</label>
+    <div>
+      <input type="checkbox" id="includeImage" name="include" value="image">
+      <label for="includeImage">Image</label>
+    </div>
+    <div>
+      <input type="checkbox" id="includeAbstract" name="include" value="abstract">
+      <label for="includeAbstract">Abstract</label>
+    </div>
+    <div>
+      <input type="checkbox" id="includeCategories" name="include" value="categories">
+      <label for="includeCategories">Categories</label>
+    </div>
+
+    <button type="submit" (click)="submitForm()">Submit</button>
+  </form>
+
+</body>
+</html>

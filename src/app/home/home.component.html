@@ -1,16 +1,24 @@
 <div>
-    <label for="tokenInput">Enter Token:</label>
-    <input type="text" id="tokenInput" [(ngModel)]="token" />
-    <button (click)="submitToken()">Submit</button>
-</div>
+  <div>
+      <label for="tokenInput">Enter Token:</label>
+      <input type="text" id="tokenInput" [(ngModel)]="token" />
+      <button (click)="submitToken()">Submit</button>
+  </div>
 
-<!-- Display links if token is set -->
-<div *ngIf="setToken">
-    <p>Token is set! You can now navigate to:</p>
-    <ul>
-      <li><a routerLink="/entity-extraction">entity-extraction</a></li>
-      <li><a routerLink="/language-detection">language-detection</a></li>
-      <li><a routerLink="/sentiment-analysis">sentiment-analysis</a></li>
-      <li><a routerLink="/text-similarity">text-similarity</a></li>
-    </ul>
+  <!-- Display links if token is set -->
+  <div *ngIf="setToken; else noTokenSet">
+      <p>Token is set! You can now navigate to:</p>
+      <ul>
+        <li><a routerLink="/entity-extraction">entity-extraction</a></li>
+        <li><a routerLink="/language-detection">language-detection</a></li>
+        <li><a routerLink="/sentiment-analysis">sentiment-analysis</a></li>
+        <li><a routerLink="/text-similarity">text-similarity</a></li>
+      </ul>
+  </div>
+
+  <div>
+    <ng-template #noTokenSet>
+      <p>Token is missing.</p>
+    </ng-template>
+  </div>
 </div>

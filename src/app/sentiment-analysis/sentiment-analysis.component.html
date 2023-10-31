@@ -1,1 +1,61 @@
-<p>sentiment-analysis works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sentiment Analysis Tool</title>
+  <!-- Include your CSS stylesheets and other necessary dependencies here -->
+  <style>
+    /* Add your custom styles here */
+    #resultContainer {
+      margin-top: 20px;
+    }
+
+    #sentimentType {
+      font-weight: bold;
+    }
+
+    .positive {
+      color: green;
+    }
+
+    .negative {
+      color: red;
+    }
+
+    .neutral {
+      color: brown;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Sentiment Analysis</h1>
+
+  <form id="sentimentAnalysisForm">
+    <label for="textInput">Text Input:</label>
+    <textarea id="textInput" name="text" rows="4" cols="50" required></textarea>
+
+    <label for="langSelect">Language:</label>
+    <select id="langSelect" name="lang">
+      <option value="en">English</option>
+      <option value="it">Italian</option>
+      <option value="auto">Auto Detect</option>
+    </select>
+
+    <button type="submit" (click)="submitForm()">Submit</button>
+  </form>
+
+  <!-- Display results here after API response -->
+  <div id="resultContainer">
+    <h2>Sentiment Analysis Result</h2>
+    <p>Score: <span id="sentimentScore"></span></p>
+    <p>Type: <span id="sentimentType"></span></p>
+  </div>
+
+  <!-- Include your scripts and other necessary dependencies here -->
+  <script>
+    // Add your custom scripts here
+  </script>
+</body>
+</html>
