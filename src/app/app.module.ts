@@ -9,6 +9,9 @@ import { TextSimilarityComponent } from './text-similarity/text-similarity.compo
 import { LanguageDetectionComponent } from './language-detection/language-detection.component';
 import { SentimentAnalysisComponent } from './sentiment-analysis/sentiment-analysis.component';
 
+import { FormsModule } from '@angular/forms';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +23,10 @@ import { SentimentAnalysisComponent } from './sentiment-analysis/sentiment-analy
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    
+    // my imports
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

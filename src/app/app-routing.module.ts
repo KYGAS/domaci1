@@ -6,12 +6,15 @@ import { LanguageDetectionComponent } from './language-detection/language-detect
 import { SentimentAnalysisComponent } from './sentiment-analysis/sentiment-analysis.component';
 import { TextSimilarityComponent } from './text-similarity/text-similarity.component';
 
+import { AuthGuard } from './auth.guard';
+
+
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'entity-extraction', component: EntityExtractionComponent },
-  { path: 'language-detection', component: LanguageDetectionComponent },
-  { path: 'sentiment-analysis', component: SentimentAnalysisComponent },
-  { path: 'text-similarity', component: TextSimilarityComponent },
+  { path: 'entity-extraction', component: EntityExtractionComponent, canActivate: [AuthGuard]},
+  { path: 'language-detection', component: LanguageDetectionComponent, canActivate: [AuthGuard] },
+  { path: 'sentiment-analysis', component: SentimentAnalysisComponent, canActivate: [AuthGuard] },
+  { path: 'text-similarity', component: TextSimilarityComponent, canActivate: [AuthGuard] },
 ];
 
 @NgModule({
