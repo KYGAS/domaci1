@@ -11,6 +11,7 @@ import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'entity-extraction', component: EntityExtractionComponent, canActivate: [AuthGuard]},
   { path: 'language-detection', component: LanguageDetectionComponent, canActivate: [AuthGuard] },
   { path: 'sentiment-analysis', component: SentimentAnalysisComponent, canActivate: [AuthGuard] },

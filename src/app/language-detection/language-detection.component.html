@@ -11,7 +11,7 @@
 
   <form id="languageDetectionForm">
     <label for="textInput">Text Input:</label>
-    <textarea id="textInput" name="text" rows="4" cols="50" required></textarea>
+    <input type="text" id="textInput" [(ngModel)]="textInput" name="textInput" />
 
     <div>
       <input type="checkbox" id="cleanCheckbox" name="clean" value="true">
@@ -22,9 +22,9 @@
   </form>
 
   <div id="resultContainer">
-    <h2>Language Detection Result</h2>
-    <ul id="languageList">
-    </ul>
+    <h2>Language Detection Result:</h2>
+
+    <p>{{ requestOutput }}</p>
   </div>
 
 </body>

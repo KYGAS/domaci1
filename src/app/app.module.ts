@@ -10,7 +10,7 @@ import { LanguageDetectionComponent } from './language-detection/language-detect
 import { SentimentAnalysisComponent } from './sentiment-analysis/sentiment-analysis.component';
 
 import { FormsModule } from '@angular/forms';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,6 +26,7 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     
     // my imports
+    HttpClientModule,
     FormsModule
   ],
   providers: [],
